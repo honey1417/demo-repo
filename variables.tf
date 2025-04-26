@@ -9,7 +9,7 @@ variable "gcp_region"{
 }
 
 variable "gcp_zone" {
-  description "default zone where resources will be created"
+  description = "default zone where resources will be created"
   type = string
   
 }
