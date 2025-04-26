@@ -14,7 +14,7 @@ resource "google_container_cluster" "primary" {
 
 resource "google_container_cluster" "primary" {
   name               = var.gke_cluster_name
-  zone               = var.gcp_zone               # Use zone instead of location
+  location           = var.gcp_zone               # Use zone instead of location
   deletion_protection = false
   remove_default_node_pool = true
   initial_node_count = var.node_count
