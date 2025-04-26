@@ -1,5 +1,6 @@
 gcp_project_id = "harshini-456810"
-gcp_region = "us-south1"
+gcp_region = "us-central11"
+gcp_zone = "us-central1-c"
 gke_cluster_name = "demo-app-cluster"
 machine_type = "e2-standard-4" 
 node_count = 1

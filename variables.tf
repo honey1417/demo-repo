@@ -8,6 +8,11 @@ variable "gcp_region"{
     type = string
 }
 
+variable "gcp_zone" {
+  type = string
+  description "default region where resources will be created"
+}
+
 variable "gke_cluster_name"{
     description = "name of GKE cluster"
     type = string

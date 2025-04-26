@@ -3,7 +3,7 @@ data "google_client_config" "default" {}
 
 data "google_container_cluster" "gke_cluster" {
   name     = var.gke_cluster_name
-  location = var.gcp_region  # Change as per your cluster
+  location = var.gcp_zone  # Change as per your cluster
   depends_on = [google_container_cluster.primary]
 }
 
