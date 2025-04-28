@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: demo-app-container
-        image: harshini1402/demo-app:tag1
+        image: harshini1402/harness-demo-repo:tag1
         ports:
         - containerPort: 8080
 
