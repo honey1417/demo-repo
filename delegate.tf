@@ -1,4 +1,4 @@
-/*
+
 # Fetch GKE Cluster Details
 data "google_client_config" "default" {}
 
@@ -44,4 +44,3 @@ module "delegate" {
   depends_on = [google_container_cluster.primary]  
 }
 
-*/
