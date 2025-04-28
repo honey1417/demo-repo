@@ -17,6 +17,7 @@ provider "kubernetes" {
 # Helm Provider using GKE authentication
 provider "helm" {
   kubernetes {
+    config_path = "~/.kube/config"
     host                   = "https://${data.google_container_cluster.gke_cluster.endpoint}"
     token                  = data.google_client_config.default.access_token
     cluster_ca_certificate = base64decode(data.google_container_cluster.gke_cluster.master_auth[0].cluster_ca_certificate)
@@ -41,10 +42,5 @@ module "delegate" {
   depends_on       = [google_container_cluster.primary]
 }
 
-provider "helm" {
-  kubernetes {
-    config_path = "~/.kube/config"
-  }
-}
   
 
