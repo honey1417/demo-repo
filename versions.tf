@@ -8,10 +8,6 @@ terraform {
       version = ">= 5.34.0"
     }
   }
-  backend "gcs" {
-    bucket = "harshini-456810-bucket"
-    prefix = "tfstate/"
-  }
 }
 
 # Terraform Provider Block
