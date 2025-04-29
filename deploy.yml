@@ -29,5 +29,5 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 8081  # <-- Fixed this line
+      targetPort: 8080  # <-- Fixed this line
   type: LoadBalancer
