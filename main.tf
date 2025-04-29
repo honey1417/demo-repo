@@ -1,6 +1,6 @@
 resource "google_container_cluster" "primary" {
   name     = var.gke_cluster_name
-  zone     = var.gcp_zone  # Use `zone` instead of `location`
+  location     = var.gcp_zone  # Use `zone` instead of `location`
   deletion_protection = false
   remove_default_node_pool = true
   initial_node_count       = 1  # Still required even though it's removed later
@@ -13,7 +13,7 @@ resource "google_container_cluster" "primary" {
 resource "google_container_node_pool" "primary_nodes" {
   name     = "primary-node-pool"
   cluster  = google_container_cluster.primary.name
-  zone     = var.gcp_zone
+  location     = var.gcp_zone
   node_count = var.node_count
   node_config {
     machine_type = var.machine_type
